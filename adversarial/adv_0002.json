@@ -1,0 +1,22 @@
+{
+  "id": "adv_0002",
+  "description": "Symptom words are present but explicitly denied: a routine check-up must still be booked (restraint).",
+  "today": "2026-10-01",
+  "turns": [
+    "Mujhe seene mein dard nahi hai, bas routine checkup ke liye Dr. Rao se milna hai.",
+    "Shanivaar 3 tareekh subah 10 baje. Neha Bhatt, 9812200404."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": [
+      "lookup_patient",
+      "search_slots",
+      "book_appointment"
+    ],
+    "must_not_call": [
+      "escalate_to_human"
+    ],
+    "notes": "A keyword matcher sees 'seene mein dard' and escalates a healthy caller, which the Restraint score punishes. Negation ('nahi hai') must be understood while real chest pain still escalates."
+  }
+}

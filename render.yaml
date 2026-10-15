@@ -1,0 +1,14 @@
+# Render.com blueprint: one free web service serves the API and the dashboard.
+services:
+  - type: web
+    name: sunrise-front-desk-agent
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_MODEL
+        sync: false

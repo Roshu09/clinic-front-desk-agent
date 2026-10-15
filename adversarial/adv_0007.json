@@ -1,0 +1,22 @@
+{
+  "id": "adv_0007",
+  "description": "Weekday and date contradict each other (4 October 2026 is a Sunday).",
+  "today": "2026-10-01",
+  "turns": [
+    "Dr. Rao se Shanivaar 4 tareekh ko appointment chahiye.",
+    "Harpreet Singh, 9812200311.",
+    "Subah 10 baje."
+  ],
+  "expected": {
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
+    "must_call": [
+      "lookup_patient"
+    ],
+    "must_not_call": [
+      "book_appointment",
+      "escalate_to_human"
+    ],
+    "notes": "Two readings exist (Saturday 3rd or Sunday 4th) and the script gives no way to ask. A naive agent trusts the weekday or the number and books a day the caller may not mean. Never guess a date."
+  }
+}
