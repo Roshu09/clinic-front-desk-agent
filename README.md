@@ -3,7 +3,7 @@
 A Python REST API with a conversational agent over six tools, plus a React dashboard (Handoff Queue + Conversation Detail).
 The design goal is an agent that stays **safe, predictable and honest when the model is free to do anything**: the model only *reads* the caller; code decides; replies come from tool results.
 
-* **Live link:** _<paste your deployed URL here>_ (API at `/agent/run`, dashboard at `/`)
+* **Live link:** https://sunrise-front-desk-agent-ine8.onrender.com (API at `/agent/run`, dashboard at `/`, health at `/health`)
 * **Read first:** [`DECISIONS.md`](DECISIONS.md) — every ambiguity, what I chose, and what looks wrong in the starter pack.
 
 ## Run it (one command)
